@@ -1,4 +1,6 @@
 ﻿![Spotify Voice Banner](https://raw.githubusercontent.com/vrevolverrr/SpotifyVoice/main/docs/banner.png)
+### still under very early stages of development and no release is available yet
+
 ## About
 
 Spotify Voice is a non-contextual voice activated assistant powered by natural language understanding (NLU) for the Spotify Desktop client. It leverages the power of the Chromium Embedded Framework of the Spotify Client to introduce a new way of interaction with the client.
@@ -6,9 +8,10 @@ Spotify Voice is a non-contextual voice activated assistant powered by natural l
 ## Features
 
 - Realtime "Spotify" hotword detection and speech to text
+- Search and play albums and tracks
 - Control playback and volume
-- Ask information on tracks and albums (TODO)
-- Remembers your preferences (TODO)
+- Query information on tracks and albums (TODO)
+- Keep track of your preferences (TODO)
 - Theme engine based on CSS (TODO)
 
 ## Performance
