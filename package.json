@@ -1,0 +1,41 @@
+{
+  "name": "spotifyvoice",
+  "version": "0.0.1",
+  "description": "A voice activated non-contextual assistant embedded within Spotify which can directly interface with the client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./build/*",
+    "build": "tsc -p ./src",
+    "copy": "copyfiles -f ./build/workers/* ./dist && copyfiles -f ./lib/* ./dist",
+    "bundle": "browserify ./build/app.js -o ./dist/bundle.js",
+    "minify": "terser ./dist/bundle.js -o ./dist/bundle.min.js",
+    "bundle-min": "npm run bundle && npm run minify",
+    "build-dev": "npm run build && npm run bundle && npm run copy && npm run clean",
+    "build-dist": "npm run build && npm run bundle-min && npm run copy && npm run clean && rimraf ./dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vrevolverrr/SpotifyVoice.git"
+  },
+  "keywords": [
+    "Spotify",
+    "NLU",
+    "hotowrd",
+    "speech"
+  ],
+  "author": "Bryan Soong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vrevolverrr/SpotifyVoice/issues"
+  },
+  "homepage": "https://github.com/vrevolverrr/SpotifyVoice#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "terser": "^5.6.0-beta",
+    "typescript": "^4.1.4"
+  },
+  "dependencies": {}
+}
